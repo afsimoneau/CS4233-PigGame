@@ -1,0 +1,23 @@
+Task List
+=========
+Constructor:
+1. Check if the score needed is positive non-zero, then save private variable
+2. Check if the dice array is not null and non-zero length, then save private variable
+3. Check if the dice array has 2 dice for TWO_DICE version, then save private variable
+
+Roll method:
+4. Check if game is already over, throw exception
+5. Roll first die in array before switch case
+6. Switch on version
+7. Write helper for swapping turns (turnSwap, just resets values and flips "turn" boolean)
+8. For STANDARD, establish turnover case (roll == 1)
+9. For TWO_DICE, roll 2nd dice, establish turnover case (roll == 7)
+10. For ONE_DIE_DUPLICATE, establish turnover case (roll == previousRoll)
+11. Add rolls to current score if no turnover
+12. Check win condition (score>=scoreNeededToWin, update scores and set gameOver=true
+13. return normal case (roll value for this turn)
+
+Hold method:
+14. Check if game is already over, throw exception
+15. Check if player has rolled this turn, throw exception if not
+16. Add turnScore to total score based on who's turn it is
